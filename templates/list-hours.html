@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Buscando horarios
+{% endblock %}
+
+{% block content %}
+    <h1>Buscando horarios??</h1>
+        <ul>
+            {% for key, value in days.items %}
+            <li>{{ value }}</li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}

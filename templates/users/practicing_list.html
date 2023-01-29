@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Listado de alumnos/as
+{% endblock %}
+
+{% block content %}
+
+    <h4>Crear nuevo/a practicante</h4> <a href="/users/practicing-create/" class="btn btn-primary">Crear</a>
+
+    {% for practicing in object_list %}
+
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{practicing.name}}</h5>
+            <p class="card-text">Direccion: {{practicing.address}}</p>
+            <p>Telefono: {{practicing.phone_number}}</p>
+            <a href="/users/practicing_update/{{practicing.id}}/" class="btn btn-primary">Actualizar</a>
+            <a href="/users/practicing_delete/{{practicing.id}}/" class="btn btn-danger">Borrar</a>
+
+        </div>
+        </div>
+
+
+
+    {% endfor %}
+
+{% endblock %}
